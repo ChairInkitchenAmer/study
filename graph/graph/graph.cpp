@@ -295,6 +295,15 @@ int main(int arc, char* argv[]) {
         SDL_UpdateWindowSurface(window);
     }
 
+    
+        
+    for (int j = 0; j < size; j++) {
+        for (int i = 0; i < size; i++) {
+            node* n = array[j][i];
+            delete(n);
+        }
+    }
+
    SDL_FreeSurface(surface);
    SDL_DestroyWindow(window);
    SDL_Quit();
